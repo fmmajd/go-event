@@ -30,12 +30,12 @@ func (e Event) SyncListeners() []Listener {
 	return e.syncListeners
 }
 
-func (e Event) Dispatch(payload Payload) {
+func (e Event) Dispatch(payload *Payload) {
 	var l Listener
 	for _, l = range e.SyncListeners() {
-		l(payload)
+		l(*payload)
 	}
 	for _, l = range e.ASyncListeners() {
-		go l(payload)
+		go l(*payload)
 	}
 }

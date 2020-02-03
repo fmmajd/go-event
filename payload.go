@@ -12,9 +12,9 @@ func CreatePayload() *Payload {
 	return &p
 }
 
-func (p *Payload) Set(key string, value interface{}) Payload{
+func (p *Payload) Set(key string, value interface{}) *Payload{
 	p.data[key] = value
-	return *p
+	return p
 }
 
 func (p Payload) All() map[string]interface{} {
