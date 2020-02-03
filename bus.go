@@ -6,13 +6,13 @@ import (
 	"sync"
 )
 
-var events map[string]Event
+var events map[string]*Event
 var once sync.Once
 
 func init() {
 	log.Println("Initializing events")
 	once.Do(func(){
-		events = make(map[string]Event)
+		events = make(map[string]*Event)
 	})
 }
 
@@ -21,10 +21,10 @@ func init() {
 func ByName(eventName string) *Event {
 	e, exists := events[eventName]
 	if !exists {
-		e = Event{name:eventName}
+		e = &Event{name:eventName}
 		events[eventName] = e
 	}
-	return &e
+	return e
 }
 
 
