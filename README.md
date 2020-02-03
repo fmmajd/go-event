@@ -4,7 +4,7 @@ this package is a minimal effort to have a simple synchronous/asynchronous event
 
 ## How to install
 ```bash
-go get github.com/fmmajd/go-event
+go get github.com/fmmajd/go-event@v1.0.0
 ``` 
 
 ## Simple Usage
