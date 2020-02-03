@@ -1,3 +1,5 @@
+[![](https://godoc.org/github.com/fmmajd/goevent?status.svg)](https://godoc.org/github.com/fmmajd/goevent)
+
 # Observer system
 
 this package is a minimal effort to have a simple synchronous/asynchronous event bus
