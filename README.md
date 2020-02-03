@@ -7,7 +7,7 @@ this package is a minimal effort to have a simple synchronous/asynchronous event
 ## How to install
 always check the last version in case I made a mistake here
 ```bash
-go get github.com/fmmajd/goevent@v0.0.3
+go get github.com/fmmajd/goevent@v0.0.4
 ``` 
 
 ## Simple Usage
