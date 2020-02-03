@@ -1,4 +1,4 @@
-package event
+package goevent
 
 type Payload struct {
 	data map[string]interface{}

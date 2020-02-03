@@ -1,4 +1,4 @@
-package event
+package goevent
 
 type Listener func(payload Payload)
 
