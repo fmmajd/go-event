@@ -1,3 +1,3 @@
-module github.com/fmmajd/go-event
+module github.com/fmmajd/goevent
 
 go 1.13
