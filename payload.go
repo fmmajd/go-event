@@ -25,6 +25,7 @@ func (p Payload) All() map[string]interface{} {
 	return p.data
 }
 
+//Returns value of a single key in payload data
 func (p Payload) Get(key string) (interface{}, bool) {
 	v, ok :=  p.data[key]
 	return v, ok
