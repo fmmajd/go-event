@@ -24,3 +24,8 @@ func (p *Payload) Set(key string, value interface{}) *Payload{
 func (p Payload) All() map[string]interface{} {
 	return p.data
 }
+
+func (p Payload) Get(key string) (interface{}, bool) {
+	v, ok :=  p.data[key]
+	return v, ok
+}

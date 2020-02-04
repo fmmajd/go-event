@@ -124,3 +124,25 @@ func TestPayload_All(t *testing.T) {
 		t.Errorf("Expected %d arguments returned, got %d", len(p.data), len(p.All()))
 	}
 }
+
+func TestPayload_Get(t *testing.T) {
+	pairs := map[string]interface{} {
+		"k1": 91209,
+		"k2": nil,
+		"k3": "AAAAAAAAA",
+		"k4": true,
+		"k5": make(chan int),
+	}
+	payload := CreatePayload()
+	for k, v := range pairs {
+		payload.Set(k, v)
+	}
+	for k, v := range pairs {
+		t.Run(k, func (t *testing.T) {
+			getV, _ := payload.Get(k)
+			if getV != v {
+				t.Errorf("Expected value %v, got %v", v, getV)
+			}
+		})
+	}
+}
