@@ -123,7 +123,6 @@ func TestEvent_Dispatch(t *testing.T) {
 			ByName(eventName).AddSyncListener(listener)
 		}
 		ByName(eventName).Dispatch(CreatePayload())
-		time.Sleep(time.Second*2)
 		if testPayload.val != n {
 			t.Errorf("Expected val to become %d, got %d", n, testPayload.val)
 		}
