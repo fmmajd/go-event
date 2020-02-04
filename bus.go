@@ -2,7 +2,6 @@
 package goevent
 
 import (
-	"log"
 	"sync"
 )
 
@@ -10,7 +9,6 @@ var events map[string]*Event
 var once sync.Once
 
 func init() {
-	log.Println("Initializing events")
 	once.Do(func(){
 		events = make(map[string]*Event)
 	})
